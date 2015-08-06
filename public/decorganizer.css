@@ -1,0 +1,54 @@
+#drag-1, #drag-2 {
+  z-index: 0;
+  position: absolute;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  min-height: 6.5em;
+  margin: 0px 0px 0px 0px;
+
+  background-color: blue;
+  color: white;
+
+  border-radius: 0.75em;
+  padding: 4%;
+
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+
+#drag-1 {
+   z-index: 1;
+  background-color: red;
+}
+
+#drag-2{ 
+
+}
+
+
+#drag-me::before {
+  content: "#" attr(id);
+  font-weight: bold;
+}
+
+.resize-drag {
+  position: absolute;
+  background-color: #29e;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 0px 0px 0px 0px;
+
+  width: 120px;
+
+  /* This makes things *much* easier */
+  box-sizing: border-box;
+}
+
+.resize-container {
+  width: 100vw;
+  height: 100vh;
+}

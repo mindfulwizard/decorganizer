@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<head>
+<link rel="stylesheet" type="text/css" href="decorganizer.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.4/interact.min.js"></script>
+<html ng-app="decorganizer" ng-controller="MainCtrl">
+</head>
+<body>
+
+<div id="frame" class="resize-container">
+	<div>
+	    <img class="resize-drag" src="/pics/spheres.jpg" height="100" width="100"/>
+	</div>
+	
+	  <img class="resize-drag" src="/pics/water.jpg" height="100" width="100"/>
+	
+	<div class="uploaded" ng-repeat="pic in pics">
+	</div>
+</div>
+
+<script src="dropzone/dropzone.js"></script>
+<script src='decorganizer.js'></script>
+</body>
+</html>
