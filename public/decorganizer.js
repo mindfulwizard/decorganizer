@@ -1,3 +1,29 @@
+if (window.File && window.FileReader && window.FileList && window.Blob) {
+
+  //   function renderImage(file){
+  //       var reader = new FileReader();
+  //       reader.onload = function(event){
+  //           the_url = event.target.result;
+  //           $('.resize-drag').attr("src", ""+the_url+"");
+  //       }
+  //       reader.readAsDataURL(file);
+  //   }
+
+  // $( "#the-photo-file-field" ).change(function() {
+  //   console.log(this.files);
+  //   URL.createObjectURL(this.files[0]);
+  // });
+    
+    document.getElementById("image").addEventListener('change',function(e){
+        var url = window.URL.createObjectURL(e.target.files[0]);
+        console.log(e.target.files[0]);
+        console.log(url);
+        $('.resize-drag').attr("src", ""+url+"");
+    },false);
+
+
+
+
 // target elements with the "draggable" class
 interact('.draggable')
   .draggable({
@@ -71,9 +97,14 @@ interact('.resize-drag')
   });
 
 
-var myDropzone = new Dropzone("div#frame", {url: "/file/post", addRemoveLinks: true, previewsContainer: false, acceptedFiles: '.jpg, .pdf, .png'});
+// var myDropzone = new Dropzone("div#frame", {url: "/file/post", addRemoveLinks: true, previewsContainer: false, acceptedFiles: '.jpg, .pdf, .png'});
 
-Dropzone.autoDiscover = false;
+// Dropzone.autoDiscover = false;
+
+// myDropzone.on("addedfile", function(file) {
+//       console.log(file);
+//       //$scope.getImgName();
+//     });
 
  
 var app = angular.module('decorganizer', []);
@@ -92,12 +123,13 @@ app.controller('MainCtrl', function ($scope, Pictures) {
   //   });
   // };
 
-
-  myDropzone.on("addedfile", function(file) {
-      console.log(file);
-      //$scope.getImgName();
-    });
  
 });
+
+} else {
+
+  alert('The File APIs are not fully supported in this browser.');
+
+};
 
 
