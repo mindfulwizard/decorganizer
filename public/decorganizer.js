@@ -39,10 +39,7 @@ function dragMoveListener (event) {
     target.setAttribute('data-y', y);
   }
 
-  // this is used later in the resizing demo
   window.dragMoveListener = dragMoveListener;
-
-
 
 
 interact('.resize-drag')
@@ -76,24 +73,31 @@ interact('.resize-drag')
 
 var myDropzone = new Dropzone("div#frame", {url: "/file/post", addRemoveLinks: true, previewsContainer: false, acceptedFiles: '.jpg, .pdf, .png'});
 
+Dropzone.autoDiscover = false;
 
+ 
 var app = angular.module('decorganizer', []);
 
+app.controller('MainCtrl', function ($scope, Pictures) {
+  $scope.images;
 
-app.controller('MainCtrl', function ($scope) {
-
-  
-}
-
-
-
-
-
-
-
-
+  // $scope.getImgName = function() {
+  //   Pictures.getImgName()
+  //   .then(function(images) {
+  //     console.log(images);
+  //     $scope.images = images;
+  //   })
+  //   .catch(function(err){
+  //   console.log('error', err);
+  //   });
+  // };
 
 
-
+  myDropzone.on("addedfile", function(file) {
+      console.log(file);
+      //$scope.getImgName();
+    });
+ 
+});
 
 

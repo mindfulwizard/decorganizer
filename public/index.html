@@ -8,17 +8,14 @@
 <body>
 
 <div id="frame" class="resize-container">
-	<div>
-	    <img class="resize-drag" src="/pics/spheres.jpg" height="100" width="100"/>
-	</div>
-	
-	  <img class="resize-drag" src="/pics/water.jpg" height="100" width="100"/>
-	
-	<div class="uploaded" ng-repeat="pic in pics">
-	</div>
+	<div class="uploaded" ng-repeat="image in images">
+		<img ng-src="pics/{{image}}" class="resize-drag" height="100" width="100"/>
+	</div>	
 </div>
 
 <script src="dropzone/dropzone.js"></script>
 <script src='decorganizer.js'></script>
+<script src='factory.js'></script>
 </body>
 </html>
+
