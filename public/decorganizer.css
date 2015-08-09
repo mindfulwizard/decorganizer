@@ -1,9 +1,21 @@
+#wall {
+  width: 100vw; 
+  height: 100vh;
+}
+
+#text {
+  width: 50%;
+  margin: auto;
+  font-size: 20px;
+  display: inline;
+}
+
 #drag-1, #drag-2 {
   z-index: 0;
   position: absolute;
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  /*width: 10%;
+  height: 10%;*/
   min-height: 6.5em;
   margin: 0px 0px 0px 0px;
 
@@ -43,12 +55,8 @@
   margin: 0px 0px 0px 0px;
 
   width: 120px;
+  height: 80px;
 
   /* This makes things *much* easier */
   box-sizing: border-box;
-}
-
-.resize-container {
-  width: 100vw;
-  height: 100vh;
 }
