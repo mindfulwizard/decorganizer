@@ -3,7 +3,7 @@
   height: 100vh;
 }
 
-#text {
+.text {
   width: 50%;
   margin: auto;
   font-size: 20px;
@@ -19,8 +19,8 @@
   min-height: 6.5em;
   margin: 0px 0px 0px 0px;
 
-  background-color: blue;
-  color: white;
+  /*background-color: blue;
+  color: white;*/
 
   border-radius: 0.75em;
   padding: 4%;
@@ -38,6 +38,11 @@
 
 }
 
+.activeImg {
+  background-color: blue;
+  /*color: pink;*/
+}
+
 
 #drag-me::before {
   content: "#" attr(id);
@@ -46,7 +51,7 @@
 
 .resize-drag {
   position: absolute;
-  background-color: #29e;
+  /*background-color: #D3D3D3;*/
   color: white;
   font-size: 20px;
   font-family: sans-serif;

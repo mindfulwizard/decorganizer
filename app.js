@@ -17,8 +17,8 @@ app.post('/file/post', upload.single('file'), function (req, res, next) {
       data come in "req.file" regardless of the attribute "name". **/
 	var tmp_path = req.file.path;
 
-  	/** The original name of the uploaded file
-      stored in the variable "originalname". **/
+  	//The original name of the uploaded file
+    //stored in the variable "originalname". 
   	var target_path = 'public/pics/' + req.file.originalname;
 
   	fileNames.push(req.file.originalname);
