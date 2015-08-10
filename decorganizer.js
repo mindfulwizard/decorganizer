@@ -16,6 +16,7 @@ $("#deleted").click(function() {
 
 document.getElementById("button").addEventListener('change',function(e){
   var url = window.URL.createObjectURL(e.target.files[0]);
+  console.log("blob/file: ", e.target.files[0]);
   var tag = "#img" + counter;
   $(tag).attr("src", ""+url+"");
   counter++;
